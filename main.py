@@ -1,25 +1,59 @@
-# 初始化各类型字符的计数变量
-letter_count = 0
-digit_count = 0
-space_count = 0
-other_count = 0
+def count_characters():
+    # 读取输入
+    text = input("请输入一行字符: ")
+    
+    # 初始化计数器
+    letters = 0
+    digits = 0
+    spaces = 0
+    others = 0
+    
+    # 遍历每个字符并分类统计
+    for char in text:
+        if char.isalpha():  # 判断是否为英文字母
+            letters += 1
+        elif char.isdigit():  # 判断是否为数字
+            digits += 1
+        elif char.isspace():  # 判断是否为空格
+            spaces += 1
+        else:  # 其他字符
+            others += 1
+    
+    # 输出结果
+    print(f"英文字符：{letters}")
+    print(f"数字：{digits}")
+    print(f"空格：{spaces}")
+    print(f"其他字符：{others}")
 
-# 从键盘输入一行字符
-input_str = input("请输入一行字符：")
+# 调用函数
+if __name__ == "__main__":
+    count_characters()def count_characters():
+    # 读取输入
+    text = input("请输入一行字符: ")
+    
+    # 初始化计数器
+    letters = 0
+    digits = 0
+    spaces = 0
+    others = 0
+    
+    # 遍历每个字符并分类统计
+    for char in text:
+        if char.isalpha():  # 判断是否为英文字母
+            letters += 1
+        elif char.isdigit():  # 判断是否为数字
+            digits += 1
+        elif char.isspace():  # 判断是否为空格
+            spaces += 1
+        else:  # 其他字符
+            others += 1
+    
+    # 输出结果
+    print(f"英文字符：{letters}")
+    print(f"数字：{digits}")
+    print(f"空格：{spaces}")
+    print(f"其他字符：{others}")
 
-# 遍历输入的每一个字符
-for char in input_str:
-    if char.isalpha():  # 判断是否为英文字符（字母）
-        letter_count += 1
-    elif char.isdigit():  # 判断是否为数字
-        digit_count += 1
-    elif char.isspace():  # 判断是否为空格
-        space_count += 1
-    else:  # 其他情况，即为其他字符
-        other_count += 1
-
-# 按照要求的格式输出结果
-print(f"英文字符：{letter_count}")
-print(f"数字：{digit_count}")
-print(f"空格：{space_count}")
-print(f"其他字符：{other_count}")# 这个文件用于编写代码
+# 调用函数
+if __name__ == "__main__":
+    count_characters()
